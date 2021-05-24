@@ -1,0 +1,10 @@
+.row-styles {
+  height: 92vh;
+  margin: 1vh 0 0 0;
+}
+.search-from-sales {
+  border-radius: 1rem;
+  margin-top: 1%;
+  border: 2px solid;
+  outline-width: 0;
+}

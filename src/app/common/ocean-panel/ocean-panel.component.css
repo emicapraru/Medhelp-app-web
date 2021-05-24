@@ -1,0 +1,27 @@
+.ocean-panel{
+    box-shadow: 0 0 5px #7e7e7e;
+    border: 1px solid transparent;
+    border-radius: 0.575rem;
+}
+
+
+.mid-round-btn{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.header-title{
+    color: #89b0ae;
+    padding-left: 1rem;
+}
+
+.float-free-right{
+    float: right;
+    margin-right: 1rem;
+}
+
+.no-margin{
+    margin: 0;
+}

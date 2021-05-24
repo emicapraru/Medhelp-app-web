@@ -1,0 +1,52 @@
+<div class="register-container">
+    <div class="register">
+        <div class="poza">
+            <img src="/assets/poza.jpg" class="marime">
+          </div>
+        <div class="register-head"> Inregistrare </div>
+        <div class="register-body">
+            <!-- first and last name -->
+            <div class="register-inputs">
+                <div class="register-body-firstname">
+                    <label class="register-input" for="firstname">Nume </label>
+                    <input class="input-width" [(ngModel)]="user.firstname" id="firstname" type="text" pInputText>
+                </div>
+                <div class="register-body-lastname">
+                    <label class="register-input" for="lastname">Prenume</label>
+                    <input class="input-width" [(ngModel)]="user.lastname" id="lastname" type="text" pInputText>
+                </div>
+            </div>
+            <!-- email -->
+         
+            <div class="register-inputs">
+                <div class="register-body-email">
+                    <label class="register-input" for="Email">E-mail </label>
+                    <input class="input-width" [(ngModel)]="user.email" id="email" type="text" pInputText>
+                </div>
+                <!-- username -->
+                <div class="register-body-username">
+                    <label class="register-input" for="Username">Nume Utilizator</label>
+                    <input class="input-width" [disabled]="true" [(ngModel)]="user.email" id="username" type="text" pInputText>
+                </div>
+            </div>
+           <div class="register-inputs">
+                <div class="register-body-password">
+                    <!-- password -->
+                    <div class="register-input">Parola</div>
+                        <input class="input-width" [(ngModel)]="user.password" pPassword type="password" />
+                </div>
+                <!-- roles -->
+                <div class="register-body-roles">
+                    <label class="register-input">Rol Utilizator</label>
+                    <!-- style is required in order to overwrite p-dropdown css rules -->
+                    <p-dropdown autoWidth="false" class="input-width" [options]="roles" placeholder="selecteaza" optionLabel="name"
+                        [(ngModel)]="user.role" [style]="{'width':'100%', 'box-shadow':'none', 'border-color': '#ced4da'}"></p-dropdown>
+                </div>
+            </div>
+        </div>
+        <div class="register-button-center">
+            <!-- submit button -->
+            <button type="button" class="ocean-button" (click)="save()">Adauga</button>
+        </div>
+    </div>
+</div>

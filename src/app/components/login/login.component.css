@@ -1,0 +1,64 @@
+.log-in-page-container {
+  padding-top: 3%;
+}
+
+.log-in-form {
+  width: 35%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-radius: 0.375rem;
+  background-clip: border-box;
+  border: 0;
+}
+
+.log-in-card-body {
+  padding: 15%;
+  text-align: center;
+}
+
+.log-in-headline {
+  text-align: center;
+  padding-bottom: 10%;
+}
+
+.log-in-input-field-conatiner {
+  transition: all 0.15s ease;
+  border-radius: 0.375rem;
+  margin-right: 0;
+  transform: translateY(0);
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 5%;
+}
+
+.log-in-input-field {
+  width: 100%;
+  padding: 3%;
+}
+
+.log-in-form,
+.log-in-input-field {
+  box-shadow: 0 0 5px #7e7e7e;
+  border: 1px solid transparent;
+}
+
+.log-in-form,
+.log-in-input-field,
+.log-in-button,
+.buton-inregistrare{
+  border-radius: 0.575rem;
+}
+
+.poza{
+  height: 30;
+  weight:30;
+}
+.marime{
+  height: 150px;
+}

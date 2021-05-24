@@ -1,0 +1,13 @@
+.page-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30%;
+
+}
+.poza{
+     background-image: url(/src/assets/download.jpg);
+height: 650 px;  
+background-size: 100%;  
+background-size: cover;  
+}

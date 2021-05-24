@@ -1,0 +1,7 @@
+<p-dropdown 
+    styleClass = "drop-height"
+    [options]="items" 
+    [ngModel]="selectedItem"
+    optionLabel="label"
+    (ngModelChange)="onSelectedValueChange($event)"
+></p-dropdown>

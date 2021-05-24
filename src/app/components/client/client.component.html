@@ -1,0 +1,346 @@
+<ng-template #clientDetails>
+    <div>
+        <div class="row sm-row-spacing">
+            <div class="col-md-6">
+                <div class="float-free-right">Nume prenume</div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <input *ngIf="editModeClientDetails;else companyNameVal" type="text"
+                    [(ngModel)]="clientDetailsState.companyName" class="small-input-field">
+                <ng-template #companyNameVal>
+                    <div class="txt-value-style">{{clientDetailsState.companyName}}</div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row sm-row-spacing">
+            <div class="col-md-6">
+                <div class="float-free-right">Numar inregistrare</div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <input *ngIf="editModeClientDetails;else registerCodeVal" type="text"
+                    [(ngModel)]="clientDetailsState.registerCode" class="small-input-field">
+                <ng-template #registerCodeVal>
+                    <div class="txt-value-style">{{clientDetailsState.registerCode}}</div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row sm-row-spacing">
+            <div class="col-md-6">
+                <div class="float-free-right">Cod fiscal</div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <input *ngIf="editModeClientDetails;else fiscalCodeVal" type="text"
+                    [(ngModel)]="clientDetailsState.fiscalCode" class="small-input-field">
+                <ng-template #fiscalCodeVal>
+                    <div class="txt-value-style">{{clientDetailsState.fiscalCode}}</div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row sm-row-spacing">
+            <div class="col-md-6">
+                <div class="float-free-right">Telefon</div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <input *ngIf="editModeClientDetails;else telephoneNoVal" type="text"
+                    [(ngModel)]="clientDetailsState.telephoneNo" class="small-input-field">
+                <ng-template #telephoneNoVal>
+                    <div class="txt-value-style">{{clientDetailsState.telephoneNo}}</div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row sm-row-spacing">
+            <div class="col-md-6">
+                <div class="float-free-right">Fax</div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <input *ngIf="editModeClientDetails;else faxVal" type="text" [(ngModel)]="clientDetailsState.fax"
+                    class="small-input-field">
+                <ng-template #faxVal>
+                    <div class="txt-value-style">{{clientDetailsState.fax}}</div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row sm-row-spacing">
+            <div class="col-md-6">
+                <div class="float-free-right">Sediu</div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <input *ngIf="editModeClientDetails;else headquarterVal" type="text"
+                    [(ngModel)]="clientDetailsState.headquarter" class="small-input-field">
+                <ng-template #headquarterVal>
+                    <div class="txt-value-style">{{clientDetailsState.headquarter}}</div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row sm-row-spacing">
+            <div class="col-md-6">
+                <div class="float-free-right">Cont bancar</div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <input *ngIf="editModeClientDetails;else bankAccountVal" type="text"
+                    [(ngModel)]="clientDetailsState.bankAccount" class="small-input-field">
+                <ng-template #bankAccountVal>
+                    <div class="txt-value-style">{{clientDetailsState.bankAccount}}</div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row sm-row-spacing">
+            <div class="col-md-6">
+                <div class="float-free-right">Banca</div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <input *ngIf="editModeClientDetails;else bankVal" type="text" [(ngModel)]="clientDetailsState.bank"
+                    class="small-input-field">
+                <ng-template #bankVal>
+                    <div class="txt-value-style">{{clientDetailsState.bank}}</div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row sm-row-spacing">
+            <div class="col-md-6">
+                <div class="float-free-right">Aspecte Importante</div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <input *ngIf="editModeClientDetails;else importantNotesVal" type="text"
+                    [(ngModel)]="clientDetailsState.importantNotes" class="small-input-field">
+                <ng-template #importantNotesVal>
+                    <div class="txt-value-style">{{clientDetailsState.importantNotes}}</div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row sm-row-spacing">
+            <div class="col-md-6">
+                <div class="float-free-right">Website</div>
+            </div>
+            <div class="col-md-6 no-padding">
+                <input *ngIf="editModeClientDetails;else websiteVal" type="text"
+                    [(ngModel)]="clientDetailsState.website" class="small-input-field">
+                <ng-template #websiteVal>
+                    <div class="txt-value-style">{{clientDetailsState.website}}</div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<div class="client-page-container">
+    <div class="p-grid no-margin">
+        <div class="p-col">
+            <ocean-panel
+                [title]="'Detalii pacient'"
+                [enableFooter]="editModeClientDetails"
+                [headerButtonIcon]="'pi pi-pencil'"
+                [contentTemplate]="clientDetails"
+                (onHeaderOutput)="onEditClientDetails()"
+                (onCancelOutput)="onCancelEditClientDetails()"
+                (onConfirmOutput)="onSaveClientDetails()">
+            </ocean-panel>        
+        </div>
+       
+       <!-- stadiu sanatate -->
+        <div class="p-col">
+            <div class="info-view-container">
+                <div class="info-header">
+                    <div class="row">
+                        <h5 class="col-md-10" style="padding-left: 30px;">Stadiu sanatate</h5>
+                        <div class="col-md-2">
+                            <button (click)="onEditProjectStageStatus()" pButton type="button" icon="pi pi-pencil"
+                                class="p-button-secondary mid-round-btn">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-content">
+                    <div class="row sm-row-spacing">
+                        <div class="col-md-6">
+                            <div class="float-free-right">Stadiu sanatate</div>
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <input *ngIf="editModeProjectStage;else projectStageVal" type="text"
+                                [(ngModel)]="projectStageState.projectStage" class="small-input-field">
+                            <ng-template #projectStageVal>
+                                <div class="txt-value-style">{{projectStageState.projectStage}}</div>
+                            </ng-template>
+                        </div>
+                    </div>
+                    <div class="row sm-row-spacing">
+                        <div class="col-md-6">
+                            <div class="float-free-right">Numar contract</div>
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <input *ngIf="editModeProjectStage;else contractNumberVal" type="text"
+                                [(ngModel)]="projectStageState.contractNumber" class="small-input-field">
+                            <ng-template #contractNumberVal>
+                                <div class="txt-value-style">{{projectStageState.contractNumber}}</div>
+                            </ng-template>
+                        </div>
+                    </div>
+        
+                    <div class="row sm-row-spacing">
+                        <div class="col-md-6">
+                            <div class="float-free-right">Administrare</div>
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <p-inputSwitch *ngIf="editModeProjectStage;else isAdministratedVal"
+                                [(ngModel)]="projectStageState.isAdministrated">
+                            </p-inputSwitch>
+                            <ng-template #isAdministratedVal>
+                                <div class="txt-value-style">{{projectStageState.isAdministrated}}</div>
+                            </ng-template>
+                        </div>
+                    </div>
+                    <div class="row sm-row-spacing" style="margin-top: 2px;margin-bottom: 2px;">
+                        <div class="col-md-6">
+                            <div class="float-free-right">Acord de lucru</div>
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <p-inputSwitch *ngIf="editModeProjectStage;else isWorkingAgreementVal"
+                                [(ngModel)]="projectStageState.isWorkingAgreement">
+                            </p-inputSwitch>
+                            <ng-template #isWorkingAgreementVal>
+                                <div class="txt-value-style">{{projectStageState.isWorkingAgreement}}</div>
+                            </ng-template>
+                        </div>
+                    </div>
+        
+                    <div class="row sm-row-spacing">
+                        <div class="col-md-6">
+                            <div class="float-free-right">Data semnare accord de lucru</div>
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <input *ngIf="editModeProjectStage;else signingDateWorkAgreementVal" type="text"
+                                [(ngModel)]="projectStageState.signingDateWorkAgreement" class="small-input-field">
+                            <ng-template #signingDateWorkAgreementVal>
+                                <div class="txt-value-style">{{projectStageState.signingDateWorkAgreement}}</div>
+                            </ng-template>
+                        </div>
+                    </div>
+        
+                    <div class="row sm-row-spacing">
+                        <div class="col-md-6">
+                            <div class="float-free-right">Numar acord</div>
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <input *ngIf="editModeProjectStage;else agreementNumberVal" type="text"
+                                [(ngModel)]="projectStageState.agreementNumber" class="small-input-field">
+                            <ng-template #agreementNumberVal>
+                                <div class="txt-value-style">{{projectStageState.agreementNumber}}</div>
+                            </ng-template>
+                        </div>
+                    </div>
+                    <div class="row sm-row-spacing">
+                        <div class="col-md-6">
+                            <div class="float-free-right">Perioada acord</div>
+                        </div>
+                        <div class="col-md-6 no-padding">
+                            <ocean-dropdown *ngIf="editModeProjectStage;else agreementPeriodVal" [items]="timeScales"
+                                [selectedItem]="projectStageState.agreementPeriod"
+                                (selectedItemChange)="onSelectTimeRange($event)"></ocean-dropdown>
+                            <ng-template #agreementPeriodVal>
+                                <div class="txt-value-style">{{projectStageState.agreementPeriod}}</div>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-footer">
+                    <div *ngIf="editModeProjectStage" class="float-free-right">
+                        <button pButton type="button" (click)="onCancelNewProjectState()" icon="pi pi-times"
+                            class="mid-round-btn p-button-danger p-button-outlined">
+                        </button>
+                        <button pButton type="button" (click)="onSaveProjectStageStatus()" icon="pi pi-check"
+                            class="mid-round-btn p-button-success p-button-outlined">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- documente pacient -->
+        <div class="p-col">
+            <div class="info-view-container">
+                <div class="info-header row">
+                    <h5 class="col-md-10" style="padding-left: 30px;">Documente pacient</h5>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+    <!-- persoane de contact -->
+    <div class="p-grid no-margin">
+        <div class="p-col">
+            <div class="info-view-container" >
+                <div class="p-grid no-margin">    
+                    <div class="p-col-10">
+                        <h5 class="header-title">Persoane de contact</h5>
+                    </div>
+                    <div class="p-col">
+                        <button 
+                        (click)="onAddContact()"
+                        pButton type="button" 
+                        icon="pi pi-plus" 
+                        class="p-button-secondary mid-round-btn">
+                        </button>
+                    </div>
+                </div>
+                <div class="info-content" style="overflow: auto;">
+                    <ocean-accordion [items]="contactPersons"></ocean-accordion>
+                </div>
+            </div>
+        </div>
+
+        <!-- discutii cu pacientul-->
+        <div class="p-col">
+            <div class="info-view-container">
+                <div class="info-header row">
+                    <h5 class="col-md-10">Discutii cu pacientul</h5>
+                    <div class="col-md-2">
+                        <button 
+                            (click)="onAddDiscution()"
+                            pButton type="button" 
+                            icon="pi pi-plus" 
+                            class="p-button-secondary mid-round-btn">
+                        </button>
+                    </div>           
+                </div>
+                <div class="info-content" style="overflow: auto;">
+                    <ocean-accordion [items]="discutions"></ocean-accordion>
+                </div>
+            </div>
+        </div>
+
+     <!-- stadiu debitor 
+        <div class="p-col">
+            <div class="info-view-container">
+                <div class="info-header row">
+                    <h5 class="col-md-10">Stadiu debitori</h5>
+                    <div class="col-md-2">
+                        <button 
+                            (click)="onAddDebitorStage()"
+                            pButton type="button" 
+                            icon="pi pi-plus" 
+                            class="p-button-secondary mid-round-btn">
+                        </button>
+                    </div>           
+                </div>
+                <div class="info-content" style="overflow: auto;">
+                    <ocean-accordion [items]="debitors"></ocean-accordion>
+                </div>
+            </div>
+        </div>
+-->
+    </div>
+</div>
+
+<p-dialog header="Adauga discutie" [modal]="true" [(visible)]="discutionDialogVisible" [style]="{width: '30vw'}" [baseZIndex]="10000">
+    <div class="row" style="margin: 10px 0px;">
+        <div class="col-md-3">Nume Client</div>
+        <input type="text" [(ngModel)]="newDiscution.header">                                           
+    </div> 
+    <div class="row" style="margin: 10px 0px;">
+        <div class="col-md-3">Subiect</div>      
+        <textarea pInputTextarea [(ngModel)]="newDiscution.content.subject"></textarea>
+    </div>
+    <ng-template pTemplate="footer">
+        <p-button icon="pi pi-times" (click)="discutionDialogVisible=false" label="Anuleaza" styleClass="p-button-text" ></p-button>
+        <p-button icon="pi pi-check" (click)="onSaveDiscution()" label="Salveaza" ></p-button>
+    </ng-template>
+</p-dialog>

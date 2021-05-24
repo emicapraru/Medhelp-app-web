@@ -1,0 +1,42 @@
+<div class="log-in-page-container">
+  <div class="log-in-form">
+    <div class="log-in-card-body">
+      <div class="log-in-headline">
+    <div class="poza">
+      <img src="/assets/poza.jpg" class="marime">
+    </div>
+        <h4>Bine ai venit!</h4>
+      </div>
+      <form>
+        <div class="log-in-input-field-conatiner">
+          <input
+            class="log-in-input-field"
+            [(ngModel)]="login.email"
+            name="email"
+            placeholder="Email"
+            type="email"
+          />
+        </div>
+        <div class="log-in-input-field-conatiner">
+          <input
+            class="log-in-input-field"
+            [(ngModel)]="login.password"
+            name="pass"
+            placeholder="Parola"
+            type="password"
+          />
+        </div>
+        <button
+          type="button"
+          class="ocean-button"
+          (click)="conecting()"
+        >
+          Conectare
+        </button>
+      </form>
+    </div>
+    <div class="bottom-login-card">
+      <h4>Nu ai cont? <button type="button" class="buton-inregistrare">Fa-ti unul aici</button></h4>
+    </div>
+  </div>
+</div>

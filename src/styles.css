@@ -1,0 +1,158 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  
+}
+body,
+button,
+input,
+.settings-button .p-component,
+.navbar-link .p-component{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+h4{
+  color: #000000 ;
+  text-align: center;
+}
+
+.info-view-container {
+  box-shadow: 0 0 5px #7e7e7e;
+  border: 1px solid transparent;
+  border-radius: 0.575rem;
+}
+
+.page-container {
+  background-color: #faf9f9;
+  
+  height: 100%;
+}
+
+.navbar-content,
+.search-from-navbar,
+.settings-button .p-megamenu,
+.navbar-link .p-button
+{
+  background-color: #2ecc71;
+}
+
+.search-from-navbar:focus,
+.settings-button .p-megamenu,
+.navbar-link .p-button,
+.navbar-link .p-button:enabled:active
+{
+  border-color: #2ecc71 ;
+}
+
+.ocean-button,
+.input-width.p-inputtext:enabled:focus,
+.input-width.p-inputtext:enabled:hover,
+.search-from-sales,
+.buton-inregistrare {
+  border-color: #12B0C4;
+}
+
+.ocean-button {
+  color: #bee3db;
+}
+
+.status-potential {
+  background-color: #bee3db;
+}
+
+.ocean-button:not(:disabled):not(.disabled).active,
+.ocean-button:not(:disabled):not(.disabled):active,
+.show > .ocean-button.dropdown-toggle,
+.ocean-button.focus,
+.ocean-button:focus,
+.ocean-button:hover,
+.ocean-button,
+.sales-tab .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.buton-inregistrare {
+  background-color: #12B0C4;
+}
+
+.log-in-input-field:focus,
+.ocean-button:focus,
+.search-from-sales:focus,
+.ocean-table-style .p-datatable .p-sortable-column {
+  outline-color: #12B0C4;
+}
+
+.log-in-headline,
+.sales-tab a,
+.register-input,
+.register-head,
+.search-from-sales,
+.ocean-table-style .p-datatable .p-sortable-column.p-highlight,
+.ocean-table-style
+  .p-datatable
+  .p-sortable-column.p-highlight
+  .p-sortable-column-icon {
+  color: #12B0C4;
+}
+
+.log-in-form,
+.register {
+  background-color: #ffffff;
+}
+
+.ocean-button,
+.navbar-content,
+.home-icon,
+.search-from-navbar::placeholder,
+.search-from-navbar,
+.navbar-link a:hover,
+.sales-tab .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+.sales-tab .nav-pills .nav-link.active, .nav-pills .show>.nav-link,
+.settings-button .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-icon,
+.p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text{
+  color: #000000;
+}
+
+.status-active {
+  background-color: #ffd6ba;
+}
+
+.status-active,
+.status-potential {
+  color: #000000;
+}
+
+.ocean-button {
+  padding: 5%;
+  box-shadow: none;
+  border: none;
+  margin-top: 10%;
+  width: 50%;
+  border-radius: 0.375rem;
+}
+
+.settings-button .p-megamenu .p-megamenu-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link,
+.settings-button .p-megamenu .p-megamenu-root-list > 
+.p-menuitem > .p-menuitem-link:not(.p-disabled):hover,
+.navbar-link .p-button,
+.navbar-link .p-button:enabled:hover,
+.navbar-link .p-button:enabled:active
+{
+  background: #2ecc71;
+}
+.navbar-link .p-button{
+  border:#2ecc71;
+}
+.navbar-link .p-button:focus
+{
+  box-shadow:0 0 0 0.2rem #2ecc71;
+}
+
+
+.bottom-login-card{
+  padding-bottom: 10%;
+  font:#0000;
+}

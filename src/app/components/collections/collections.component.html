@@ -1,0 +1,23 @@
+<div class="p-grid" style="height:50%">
+    <div class="p-col-8">
+        <ocean-panel
+            [title]="'Alabama'"
+            [enableFooter]="editMode"
+            [headerButtonIcon]="'pi pi-pencil'"
+            [contentTemplate]="contentTemplate"
+            (onHeaderOutput)="onHeaderButton()"
+            (onConfirmOutput)="onFooterOKBtn()"
+            (onCancelOutput)="onFooterCancelBtn()">
+        </ocean-panel>
+    </div>
+    <div class="p-col-2">
+        <ocean-panel></ocean-panel>
+    </div>
+</div>
+
+<ng-template #contentTemplate>
+    <p>ana merge</p>
+    <p>ana merge</p>
+    <p>ana merge</p>
+    <button (click)="add()">aaa </button>
+</ng-template>

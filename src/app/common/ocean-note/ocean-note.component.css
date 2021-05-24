@@ -1,0 +1,66 @@
+h2,
+p {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+div {
+  list-style: none;
+}
+
+div a {
+  text-decoration: none;
+  color: #000;
+  /* background:#ffc; */
+  display: block;
+  height: 10em;
+  width: 10em;
+  padding: 1em;
+  -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+  -moz-transition: -moz-transform .15s linear;
+  -o-transition: -o-transform .15s linear;
+  -webkit-transition: -webkit-transform .30s linear;
+}
+
+div {
+  margin: 1em;
+  float: left;
+}
+
+div h2 {
+  /* font-size:140%; */
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+div p {
+  font-family: "Reenie Beanie", arial, sans-serif;
+  /* font-size:180%; */
+}
+
+div a:hover,
+div a:focus {
+  box-shadow: 10px 10px 7px gray;
+  -moz-box-shadow: 10px 10px 7px gray;
+  -webkit-box-shadow: 10px 10px 7px gray;
+  -webkit-transform: scale(1.10);
+  -moz-transform: scale(1.10);
+  -o-transform: scale(1.10);
+  position: relative;
+  z-index: 5;
+}
+
+ol {
+  text-align: center;
+}
+
+ol div {
+  display: indivne;
+  padding-right: 1em;
+}
+
+ol div a {
+  color: #fff;
+}

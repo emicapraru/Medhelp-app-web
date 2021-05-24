@@ -1,0 +1,86 @@
+.navbar-content {
+  z-index: 2;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  padding: 0 4%;
+}
+
+.left-menu-items {
+  justify-content: left;
+  font-size:16px;
+}
+
+.center-menu-items {
+  margin: auto;
+}
+
+.right-menu-items {
+  justify-content: right;
+  display: contents;
+}
+
+.home-icon {
+  vertical-align: text-bottom;
+}
+
+.search-from-navbar {
+  display: block;
+  margin-left: 2%;
+  width: 10%;
+  height: 20%;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-clip: padding-box;
+  border: 1px solid white;
+  border-radius: 1rem;
+  box-shadow: none;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-from-navbar:focus {
+  outline: 0;
+  box-shadow: none, none;
+}
+
+.search-from-navbar::placeholder {
+  opacity: 1;
+}
+
+:host >>> .navbar-link .p-button .p-button-icon-left{
+  margin-bottom: 0.2rem;
+}
+
+.navbar-link a:hover {
+  text-decoration: none;
+}
+
+.logout-button {
+  padding-left: 2%;
+  font-size: 16px;
+}
+
+:host>>> .settings-button .p-megamenu{
+  padding: 0;
+  margin-left: 1rem;
+}
+
+:host >>> .settings-button .pi-angle-down:before {
+  content: none;
+}
+
+:host >>> .settings-button .p-megamenu-root-list>.p-menuitem-active>.p-megamenu-panel{
+  position: absolute;
+  top: 3.3rem;
+  right: -4.5rem;
+}
+
+:host >>>.settings-button .p-megamenu .p-megamenu-submenu-header{
+  padding: 0;
+}
+
+:host >>>.settings-button .p-megamenu .p-menuitem-link:focus {
+  box-shadow:none;
+}

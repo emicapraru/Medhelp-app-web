@@ -1,0 +1,35 @@
+<div class="ocean-table-style">
+<p-table [columns]="columns" [value]="items">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns" pSortableColumn="col.field">
+                {{col.header}} <p-sortIcon  *ngIf="col.isSortable" field="col.field">
+                </p-sortIcon>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-item let-columns="columns">
+
+        <!-- <tr>
+            <td *ngFor="let col of columns">
+                {{item[col.field]}}
+            </td>
+        </tr> -->
+
+        <tr class="ui-selectable-row">
+            <td>
+                <!-- <span class="ui-column-title">Name</span> -->
+                &#123;&#123;item.name&#125;&#125;
+            </td>
+            <td>
+                <!-- <span class="ui-column-title">Status</span> -->
+                <span [class]="'customer-badge status-' + item.status">&#123;&#123;item.status&#125;&#125;</span>
+            </td>
+            <td>
+                &#123;&#123;item.task&#125;&#125;
+            </td>
+        </tr>
+
+    </ng-template>
+</p-table>
+</div>

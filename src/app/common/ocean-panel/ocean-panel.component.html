@@ -1,0 +1,26 @@
+<div class="ocean-panel">
+    <div class="p-grid no-margin">    
+        <div class="p-col-10">
+            <h5 class="header-title">{{title}}</h5>
+        </div>
+        <div class="p-col">
+            <button
+                (click)="onHeaderOutput.emit()"
+                pButton type="button" 
+                [icon]="headerButtonIcon" 
+                class="p-button-secondary mid-round-btn">
+            </button>
+        </div>
+    </div>
+    <div class="info-content" style="overflow: auto;">
+        <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    </div>
+    <div *ngIf="enableFooter" class="float-free-right">
+        <button pButton type="button" (click)="onCancelOutput.emit()" icon="pi pi-times"
+            class="mid-round-btn p-button-danger p-button-outlined">
+        </button>
+        <button pButton type="button" (click)="onConfirmOutput.emit()" icon="pi pi-check"
+            class="mid-round-btn p-button-success p-button-outlined">
+        </button>
+    </div>
+</div>

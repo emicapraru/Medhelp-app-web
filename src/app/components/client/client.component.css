@@ -1,0 +1,63 @@
+.vertical-form{
+    display: flex;
+    flex-flow: column;
+}
+
+.header-title{
+    color: #89b0ae;
+    padding-left: 1rem;
+}
+
+.small-input-field{
+    border-radius: 0.5em;
+    border: 1px solid #ced4da;
+    height: 26px;
+}
+
+.client-page-container{
+    overflow: hidden;
+}
+
+.no-margin{
+    margin: 0;
+}
+.info-header,
+.info-footer{
+    height: 12%;
+    padding: 10px 0px;
+}
+.p-inputswitch{
+    height: 1.6rem;
+}
+.info-content{
+    height: 76%;
+}
+
+.sm-row-spacing{
+    padding: 1px 0px;
+    margin: 0;
+}
+
+.float-free-right{
+    float: right;
+    margin-right: 10px;
+}
+
+.no-padding{
+    padding: 0px;
+}
+
+.txt-value-style{
+    font-weight:bold;
+    /* height: 26px; */
+}
+.info-height{
+    height: 28px;
+}
+
+.mid-round-btn{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: 2px;
+}

@@ -1,0 +1,35 @@
+<mat-toolbar class="navbar-content">
+  <div class="left-menu-items">
+    <div class="navbar-link">
+      <p-button routerLink="/" label="Acasa" icon="pi pi-home"></p-button>
+    </div>
+  </div>
+
+  <div class="center-menu-items navbar-link">
+    <p-button routerLink="/vanzari"> Pacienti</p-button>
+    <p-button routerLink="/client">Fisa medicala</p-button>
+   
+   <p-button routerLink="/colectari">Medic</p-button>
+   <p-button routerLink="/observatii">Ingrijitor</p-button>
+   <!----
+   <p-button routerLink="/adauga-companie">Adauga companie</p-button>
+   <p-button routerLink="/activitate">Activitate</p-button>
+   <p-button routerLink="/mesaje">Mesaje</p-button>
+   <p-button value="Open" href="http://portal.just.ro/SitePages/acasa.aspx" target="_blank">Portal Judecatorie
+   </p-button>
+  -->
+    
+  </div>
+
+  <div class="right-menu-items">
+    <div class="settings-button">
+      <p-megaMenu [model]="items">
+      </p-megaMenu>
+    </div>
+
+    <div class="navbar-link">
+      <p-button label="Deconectare" icon="pi pi-power-off" (click)="logoutAndRefreshPage()"></p-button>
+    </div>
+
+  </div>
+</mat-toolbar>
